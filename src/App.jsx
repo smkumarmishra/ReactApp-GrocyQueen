@@ -1,15 +1,60 @@
-import { useState } from "react";
+// import { useState } from "react";
+// import Home from "./components/Home/Home";
+// import { createBrowserRouter, RouterProvider } from "react-router-dom";
+// import Fruits from "./components/Fruits/Fruits";
+// import Dairy from "./components/Dairy/Dairy";
+// import SeaFood from "./components/SeaFood/SeaFood";
+// import AllProducts from "./components/AllProducts/AllProducts";
+// import Layout from "./components/Layout/Layout";
+
+
+// function App() {
+//   const router = createBrowserRouter([
+//     {
+//       path: "/",
+//       element: <Layout />,
+//       children: [
+//         {
+//           path: "/",
+//           element: <Home />,
+//         },
+//         {
+//           path: "/fruits",
+//           element: <Fruits />,
+//         },
+//         {
+//           path: "/dairy",
+//           element: <Dairy />,
+//         },
+//         {
+//           path: "/seafood",
+//           element: <SeaFood />,
+//         },
+//         ,
+//         {
+//           path: "/allProducts",
+//           element: <AllProducts />,
+//         },
+//       ],
+//     },
+//   ]);
+
+//   return <RouterProvider router={router} />;
+// }
+
+// export default App;
+
+
 import Home from "./components/Home/Home";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 import Fruits from "./components/Fruits/Fruits";
 import Dairy from "./components/Dairy/Dairy";
 import SeaFood from "./components/SeaFood/SeaFood";
 import AllProducts from "./components/AllProducts/AllProducts";
 import Layout from "./components/Layout/Layout";
 
-
 function App() {
-  const router = createBrowserRouter([
+  const router = createHashRouter([
     {
       path: "/",
       element: <Layout />,
@@ -30,7 +75,6 @@ function App() {
           path: "/seafood",
           element: <SeaFood />,
         },
-        ,
         {
           path: "/allProducts",
           element: <AllProducts />,
